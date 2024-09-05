@@ -1,5 +1,6 @@
 import { Button, Text, View } from "react-native";
 import React, { useState } from "react";
+import { StyleSheet } from "react-native";
 
 function Contador() {
     const [contador, setContador] = useState(0);
@@ -15,32 +16,32 @@ function Contador() {
         setContador(0);
     }
 
-    //Generame otra funcion con otro boton que al clickear se muestre un numero random
     const random = () => {
         setContador(Math.floor(Math.random() * 100));
     }
-    <View style={{ marginBottom: 24 }}>
-        <Button onPress={random} title="Random" />
-    </View>
-
-
-
-
 
     return (
-        <View style={{ marginBottom: 24 }}>
-            <Text style={{ marginBottom: 24 }}> Contador actual: {contador}</Text>
-            <View style={{ marginBottom: 24 }}>
-                <Button onPress={incrementar} title="Incrementar" />
-            </View>
-            <View style={{ marginBottom: 24 }}>
-                <Button onPress={decrementar} title="Decrementar" />
-            </View>
-            <View style={{ marginBottom: 24 }}>
-                <Button onPress={reset} title="Reiniciar" />
-            </View>
+        <View style={[styles.container, styles.buttonContainer]}>
+            <Text> Contador actual: {contador}</Text>
+            <Button onPress={incrementar} title="Incrementar" />
+            <Button onPress={decrementar} title="Decrementar" />
+            <Button onPress={reset} title="Reiniciar" />
+            <Button onPress={random} title="Random" />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    buttonContainer: {
+        flexDirection: "column",
+        justifyContent: "space-around",
+        marginBottom: 24,
+    },
+});
 
 export default Contador;
