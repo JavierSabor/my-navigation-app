@@ -36,10 +36,14 @@ function Contador() {
 
 const styles = StyleSheet.create({
     textContador: {
+        flex: 1,
         fontSize: 25,
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 40,
+        marginLeft: 20,
+        minWidth: "60%",
+
     },
     Container: {
         flex: 1,
