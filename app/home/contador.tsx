@@ -21,22 +21,38 @@ function Contador() {
     }
 
     return (
-        <View style={[styles.buttonContainer]}>
-            <Text> Contador actual: {contador}</Text>
-            <Button onPress={incrementar} title="Incrementar" />
-            <Button onPress={decrementar} title="Decrementar" />
-            <Button onPress={reset} title="Reiniciar" />
-            <Button onPress={random} title="Random" />
+        <View style={[styles.Container]}>
+            <Text style = {[styles.textContador]}> Contador actual: {contador}</Text>
+            <View style = {[styles.buttonContainer]}>
+                <Button onPress={incrementar} title="Incrementar" />
+                <Button onPress={decrementar} title="Decrementar" />
+                <Button onPress={reset} title="Reiniciar" />
+                <Button onPress={random} title="Random" />
+            </View>
+
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    buttonContainer: {
+    textContador: {
+        fontSize: 25,
+        justifyContent: "center",
+        alignItems: "center",
+        marginBottom: 40,
+    },
+    Container: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        alignSelf: "center",
+    },
+    buttonContainer: {
         flexDirection: "column",
+        justifyContent: "space-around",
+        height: 200,
+        width: "40%"
+
     },
 });
 
