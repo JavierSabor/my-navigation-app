@@ -17,6 +17,9 @@ const Tarjeta = ({ texto }: TarjetaProps) => {
 	  <Text style = {[styles.Card, isTouched && styles.CardTouched]}>
 		{texto}
 	  </Text>
+    <Tarjeta texto="Tarjeta 1: VISA BANCO PATAGONIA"/> 
+    <Tarjeta texto="Tarjeta 2: MASTERCARD BANCO GALICIA"/>
+    <Tarjeta texto="Tarjeta 3: AMEX BANCO SANTANDER" />
 	</Pressable>
   
   );
