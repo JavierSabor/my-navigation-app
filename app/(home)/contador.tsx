@@ -26,8 +26,9 @@ function Contador() {
             <View style = {[styles.buttonContainer]}>
                 <Button onPress={incrementar} title="Incrementar" />
                 <Button onPress={decrementar} title="Decrementar" />
-                <Button onPress={reset} title="Reiniciar" />
                 <Button onPress={random} title="Random" />
+                <Button onPress={reset} title="Reiniciar" />
+                
             </View>
 
         </View>
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: 40,
+        marginBottom: 30,
         marginLeft: 8,
         minWidth: "60%",
 
@@ -53,9 +54,8 @@ const styles = StyleSheet.create({
     buttonContainer: {
         flexDirection: "column",
         justifyContent: "space-around",
-        height: 200,
-        width: "40%"
-
+        height: 250,
+        width: 200,
     },
 });
 
