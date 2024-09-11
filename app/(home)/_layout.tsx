@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useColorScheme } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Colors } from '@/constants/Colors';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -13,7 +13,6 @@ export default function TabLayout() {
         headerShown: false,
       }}
     >
-
       <Tabs.Screen
         name="contador"
         options={{
