@@ -2,6 +2,7 @@ import { Tabs } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useColorScheme } from 'react-native';
 import { Colors } from '@/constants/Colors';
+import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -25,9 +26,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Perfil',
           tabBarIcon: ({ color, focused }) => (
-            <FontAwesome name={focused ? 'home' : 'home'} color={color} size={24} />
+            <TabBarIcon name={focused ? 'person' : 'person-outline'} color={color} size={24} />
           ),
         }}
       />
@@ -36,7 +37,7 @@ export default function TabLayout() {
         options={{
           title: 'Tarjetas',
           tabBarIcon: ({ color, focused }) => (
-            <FontAwesome name={focused ? 'credit-card' : 'credit-card'} color={color} size={24} />
+            <TabBarIcon name={focused ? 'card' : 'card-outline'} color={color} size={24} />
           ),
         }}
       />

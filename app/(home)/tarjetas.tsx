@@ -69,6 +69,7 @@ Contenedor:{
       borderColor: "black",
       borderRadius: 30,
       width: "100%",
+      overflow: 'hidden'
     },
 
 CardTouched: {

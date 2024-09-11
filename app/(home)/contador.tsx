@@ -41,8 +41,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 30,
-        marginLeft: 8,
-        minWidth: "60%",
+
+
+
 
     },
     Container: {
